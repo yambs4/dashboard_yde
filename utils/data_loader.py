@@ -1,24 +1,35 @@
 import pandas as pd
 from typing import Dict, Any
+import streamlit as st
 
 def load_all_data(excel_path: str) -> Dict[str, Any]:
+    xl = pd.ExcelFile(excel_path)
+    available = xl.sheet_names
     data = {}
-    data['projects'] = pd.read_excel(excel_path, sheet_name='type_of_work')
-    data['education'] = pd.read_excel(excel_path, sheet_name='education')
-    data['certifications'] = pd.read_excel(excel_path, sheet_name='cert_training')
-    data['employment'] = pd.read_excel(excel_path, sheet_name='employment')
-    data['publications'] = pd.read_excel(excel_path, sheet_name='publications')
-    data['core_skills'] = pd.read_excel(excel_path, sheet_name='core_skills')
-    data['software'] = pd.read_excel(excel_path, sheet_name='software')
-    data['languages'] = pd.read_excel(excel_path, sheet_name='language')
-    data['positions_of_trust'] = pd.read_excel(excel_path, sheet_name='positions_of_trust')
-    data['required_expertise'] = pd.read_excel(excel_path, sheet_name='required_expertise')
-    data['data_used'] = pd.read_excel(excel_path, sheet_name='data_used')
-    data['bridge_project_software'] = pd.read_excel(excel_path, sheet_name='bridge_project_software')
-    data['bridge_project_data'] = pd.read_excel(excel_path, sheet_name='bridge_project_data')
-    data['bridge_project_expertise'] = pd.read_excel(excel_path, sheet_name='bridge_project_expertise')
-    data['bridge_expertise_core_skill'] = pd.read_excel(excel_path, sheet_name='bridge_expertise_core_skill')
+
+    def safe_sheet(name: str) -> pd.DataFrame:
+        return pd.read_excel(excel_path, sheet_name=name) if name in available else pd.DataFrame()
+
+    data['projects'] = safe_sheet('type_of_work')
+    data['education'] = safe_sheet('education')
+    data['certifications'] = safe_sheet('cert_training')
+    data['employment'] = safe_sheet('employment')
+    data['publications'] = safe_sheet('publications')
+    data['core_skills'] = safe_sheet('core_skills')
+    data['software'] = safe_sheet('software')
+    data['languages'] = safe_sheet('language')
+    data['positions_of_trust'] = safe_sheet('positions_of_trust')
+    data['required_expertise'] = safe_sheet('required_expertise')
+    data['data_used'] = safe_sheet('data_used')
+    data['bridge_project_software'] = safe_sheet('bridge_project_software')
+    data['bridge_project_data'] = safe_sheet('bridge_project_data')
+    data['bridge_project_expertise'] = safe_sheet('bridge_project_expertise')
+    data['bridge_expertise_core_skill'] = safe_sheet('bridge_expertise_core_skill')
     return data
+
+@st.cache_data
+def get_data() -> Dict[str, Any]:
+    return load_all_data("CV_data.xlsx")
 
 def get_project_skills(data: Dict[str, Any]) -> pd.DataFrame:
     projects = data['projects'].copy()
