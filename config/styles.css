@@ -1,0 +1,42 @@
+.main .block-container {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    max-width: 1200px;
+}
+
+h1 {
+    color: #1f2937;
+    font-size: 2.5rem;
+    font-weight: 700;
+}
+
+h2 {
+    color: #374151;
+    font-size: 1.75rem;
+    font-weight: 600;
+    border-bottom: 2px solid #e5e7eb;
+    padding-bottom: 0.5rem;
+}
+
+h3 {
+    color: #4b5563;
+    font-size: 1.25rem;
+    font-weight: 600;
+}
+
+.metric-card {
+    background-color: #f9fafb;
+    border: 1px solid #e5e7eb;
+    border-radius: 0.5rem;
+    padding: 1rem;
+}
+
+.tag {
+    display: inline-block;
+    background-color: #dbeafe;
+    color: #1e40af;
+    padding: 0.25rem 0.75rem;
+    border-radius: 9999px;
+    font-size: 0.875rem;
+    margin: 0.25rem;
+}
