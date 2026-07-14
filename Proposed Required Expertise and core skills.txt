@@ -1,0 +1,51 @@
+## Task 3: Proposed Required Expertise and Core Skills Mapping
+
+Based on my analysis of all 27 projects, here's my proposed mapping:
+
+### Proposed Required Expertise Categories:
+1. **Monitoring & Evaluation** - Projects focusing on monitoring frameworks, progress tracking
+2. **Impact Evaluation** - Projects using PSM, DiD, RCT, quasi-experimental designs
+3. **Baseline Assessment** - Initial situation analyses and baseline surveys
+4. **Business Analytics** - Financial modeling, KPI development, business planning
+5. **Economic Research** - Policy research, CGE modeling, econometric analysis
+6. **Formative/Process Evaluation** - Mid-term assessments, learning evaluations
+7. **Terminal Evaluation** - End-of-project impact assessments
+8. **Data Quality Assurance** - Survey management, data validation
+9. **Capacity Building** - Training, mentorship, technical assistance
+10. **Environmental Economics** - Natural resource management, WTP studies
+11. **Nutrition & Health** - Health program evaluations, nutrition assessments
+12. **Migration & Climate Change** - Mobility studies, disaster risk assessment
+
+### Project-by-Project Mapping:
+
+I'll map each of the 27 projects to expertise and core skills. Here's a sample to illustrate the approach:
+
+| Project | Required Expertise | Required Core Skills |
+|---------|-------------------|----------------------|
+| PSNP IV CD evaluation | Monitoring & Evaluation | M&E; Advanced Statistical Analysis; Thematic Qualitative Analysis; Survey Design |
+| MSC assessment | Monitoring & Evaluation | Thematic Qualitative Analysis; Advanced Statistical Analysis |
+| EnJOY baseline | Baseline Assessment | Data Cleaning; Advanced Statistical Analysis; Thematic Qualitative Analysis; Survey Design |
+| Africa RISING | Economic Research | Data Cleaning; Advanced Statistical Analysis; Data Visualization |
+| UPSNP baseline | Data Quality Assurance | Survey Design; Data Cleaning; Advanced Statistical Analysis |
+| BI study waste | Monitoring & Evaluation | Survey Design; Data Cleaning; Data Visualization |
+| FEA Ethiopia | Baseline Assessment | Spatial Data Analysis; Data Cleaning; Advanced Statistical Analysis; Survey Design |
+| Skill gap assessment | Impact Evaluation | Data Cleaning; Advanced Statistical Analysis; Survey Design |
+| GIC project | Monitoring & Evaluation | Survey Design; Data Cleaning; Advanced Statistical Analysis |
+| AYEW survey | Baseline Assessment | Survey Design; Data Cleaning; Data Visualization |
+| WTP study | Environmental Economics | Survey Design; Data Cleaning; Advanced Statistical Analysis; Data Visualization |
+| KfW evaluation | Terminal Evaluation | Data Cleaning; Advanced Statistical Analysis; Thematic Qualitative Analysis |
+| Poverty study | Economic Research | Data Cleaning; Advanced Statistical Analysis; Data Visualization |
+| Energy Efficiency | Economic Research | Data Cleaning; Advanced Statistical Analysis; Data Visualization |
+| ENTRO flood | Data Quality Assurance | Survey Design; Data Cleaning |
+| EMERTA evaluation | Terminal Evaluation | Impact Evaluation; Data Cleaning; Data Visualization |
+| Ethio Legal Shield | Business Analytics | Business Analytics & Financial Modeling |
+| Mobility & Climate | Capacity Building | Data Cleaning; Advanced Statistical Analysis; Spatial Data Analysis; Survey Design |
+| Tracer study | Impact Evaluation | Impact Evaluation; Survey Design; Data Cleaning; Thematic Qualitative Analysis |
+| Business KPIs | Business Analytics | Business Analytics; Data Cleaning; Advanced Statistical Analysis |
+| IO Multipliers | Economic Research | Data Cleaning; Advanced Statistical Analysis |
+| CBT & DIF evaluation | Terminal Evaluation | Impact Evaluation; Data Cleaning; Thematic Qualitative Analysis |
+| ACRFSE RCT | Impact Evaluation | Impact Evaluation; Survey Design; Data Cleaning; Data Visualization |
+| Family MUAC | Terminal Evaluation | Data Cleaning; Advanced Statistical Analysis; Survey Design |
+| Menstrual Health | Baseline Assessment | Survey Design; Data Cleaning; Advanced Statistical Analysis; Business Analytics |
+| Multidimensional Poverty | Baseline Assessment | Data Cleaning; Advanced Statistical Analysis; Spatial Data Analysis; Survey Design |
+| AYPReS | Baseline Assessment | Survey Design; Data Cleaning; Data Visualization |
