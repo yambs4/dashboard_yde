@@ -4,6 +4,7 @@ from utils.data_loader import get_data, get_project_skills, get_project_software
 
 data = get_data()
 projects = get_project_skills(data)
+projects = get_project_software(projects, data)
 
 st.title("Skills Matrix")
 
@@ -18,14 +19,13 @@ skill_counts.columns = ['Skill', 'Count']
 st.bar_chart(skill_counts.set_index('Skill'))
 
 st.subheader("Software Usage")
-sw_projects = get_project_software(data)
-sw_counts = sw_projects['software_list'].dropna().str.split(', ').explode().value_counts().reset_index()
+sw_counts = projects['software_list'].dropna().str.split(', ').explode().value_counts().reset_index()
 sw_counts.columns = ['Software', 'Count']
 st.bar_chart(sw_counts.set_index('Software'))
 
 st.subheader("Detailed Skills Breakdown")
 st.dataframe(
     projects[['Title', 'type', 'expertise_list', 'skills_list', 'software_list']],
-    use_container_width=True,
+    width='stretch',
     hide_index=True
 )
