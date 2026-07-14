@@ -1,0 +1,602 @@
+
+[     UTC     ] Logs for dashboardyde-79upbk9xsaj3w8hsjpvozt.streamlit.app/
+────────────────────────────────────────────────────────────────────────────────────────
+[07:01:59] 🚀 Starting up repository: 'dashboard_yde', branch: 'master', main module: 'app.py'
+[07:01:59] 🐙 Cloning repository...
+[07:01:59] 🐙 Cloning into '/mount/src/dashboard_yde'...
+
+[07:01:59] 🐙 Cloned repository!
+[07:01:59] 🐙 Pulling code changes from Github...
+[07:02:00] 📦 Processing dependencies...
+
+──────────────────────────────────────── uv ───────────────────────────────────────────
+
+Using uv pip install.
+Using Python 3.14.6 environment at /home/adminuser/venv
+Resolved 45 packages in 428ms
+Prepared 45 packages in 1.58s
+Installed 45 packages in 80ms
+ + altair==6.2.2
+ + anyio==4.14.2
+ + attrs==26.1.0
+ + blinker==1.9.0
+ + cachetools==7.1.4
+ + certifi==2026.6.17
+ + [2026-07-14 07:02:02.536733] charset-normalizer==3.4.9
+ + click==8.4.2
+ + et-xmlfile==2.0.0
+ + gitdb==4.0.12
+ + gitpython==3.1.51
+ + h11==0.16.0
+ + httptools==0.8.0[2026-07-14 07:02:02.536932] 
+ + idna==3.18
+ + itsdangerous==2.2.0
+ + jinja2==3.1.6
+ + jsonschema==4.26.0
+ +[2026-07-14 07:02:02.537134]  jsonschema-specifications==2025.9.1
+ + markupsafe==3.0.3
+ + narwhals==2.24.0
+ + numpy==2.5.1
+ + openpyxl==3.1.5
+ + packaging==26.2
+ + pandas==3.0.3
+ + pillow==12.3.0
+ + plotly==6.9.0
+ + protobuf[2026-07-14 07:02:02.537756] ==7.35.1
+ + pyarrow==24.0.0
+ + pydeck==0.9.3
+ + python-dateutil==2.9.0[2026-07-14 07:02:02.537953] .post0
+ + python-multipart==0.0.32
+ + referencing==0.37.0
+ + requests==2.34.2
+ + [2026-07-14 07:02:02.538121] rpds-py==2026.6.3
+ + six==1.17.0
+ + smmap==5.0.3
+ + starlette==1.3.1
+ +[2026-07-14 07:02:02.538288]  streamlit==1.59.2
+ + tenacity==9.1.4
+ + toml==0.10.2
+ + typing-extensions[2026-07-14 07:02:02.538465] ==4.16.0
+ + urllib3==2.7.0
+ + uvicorn==0.51.0
+ + watchdog[2026-07-14 07:02:02.538578] ==6.0.0
+ + websockets==16.1
+Checking if Streamlit is installed
+Found Streamlit version 1.59.2 in the environment
+Installing rich for an improved exception logging
+Using uv pip install.
+Using Python 3.14.6 environment at /home/adminuser/venv
+Resolved 4 packages in 116ms
+Prepared 4 packages in 100ms
+Installed 4 packages in 11ms
+ + [2026-07-14 07:02:04.676912] markdown-it-py==4.2.0
+ + mdurl==0.1.2
+ + pygments==2.20.0
+ + rich==15.0.0
+
+────────────────────────────────────────────────────────────────────────────────────────
+
+[07:02:04] 🐍 Python dependencies were installed from /mount/src/dashboard_yde/requirements.txt using uv.
+Check if streamlit is installed
+Streamlit is already installed
+[07:02:06] 📦 Processed dependencies!
+2026-07-14 07:02:07.549 Uvicorn server started on 0.0.0.0:8501
+
+
+
+────────────────────── Traceback (most recent call last) ───────────────────────
+  /home/adminuser/venv/lib/python3.14/site-packages/streamlit/runtime/scriptru  
+  nner/exec_code.py:129 in exec_func_with_error_handling                        
+                                                                                
+  /home/adminuser/venv/lib/python3.14/site-packages/streamlit/runtime/scriptru  
+  nner/script_runner.py:793 in code_to_exec                                     
+                                                                                
+  /home/adminuser/venv/lib/python3.14/site-packages/streamlit/runtime/scriptru  
+  nner/script_runner.py:170 in _mpa_v1                                          
+                                                                                
+  /home/adminuser/venv/lib/python3.14/site-packages/streamlit/navigation/page.  
+  py:490 in run                                                                 
+                                                                                
+  /mount/src/dashboard_yde/app.py:19 in <module>                                
+                                                                                
+    16 def get_data():                                                          
+    17 │   return load_all_data("CV_data.xlsx")                                 
+    18                                                                          
+  ❱ 19 data = get_data()                                                        
+    20                                                                          
+    21 st.sidebar.title("Navigation")                                           
+    22 st.sidebar.markdown("---")                                               
+                                                                                
+  /home/adminuser/venv/lib/python3.14/site-packages/streamlit/runtime/caching/  
+  cache_utils.py:281 in __call__                                                
+                                                                                
+  /home/adminuser/venv/lib/python3.14/site-packages/streamlit/runtime/caching/  
+  cache_utils.py:326 in _get_or_create_cached_value                             
+                                                                                
+  /home/adminuser/venv/lib/python3.14/site-packages/streamlit/runtime/caching/  
+  cache_utils.py:385 in _handle_cache_miss                                      
+                                                                                
+  /mount/src/dashboard_yde/app.py:17 in get_data                                
+                                                                                
+    14                                                                          
+    15 @st.cache_data                                                           
+    16 def get_data():                                                          
+  ❱ 17 │   return load_all_data("CV_data.xlsx")                                 
+    18                                                                          
+    19 data = get_data()                                                        
+    20                                                                          
+                                                                                
+  /mount/src/dashboard_yde/utils/data_loader.py:14 in load_all_data             
+                                                                                
+    11 │   data['core_skills'] = pd.read_excel(excel_path, sheet_name='core_sk  
+    12 │   data['software'] = pd.read_excel(excel_path, sheet_name='software')  
+    13 │   data['languages'] = pd.read_excel(excel_path, sheet_name='language'  
+  ❱ 14 │   data['positions_of_trust'] = pd.read_excel(excel_path, sheet_name='  
+    15 │   data['required_expertise'] = pd.read_excel(excel_path, sheet_name='  
+    16 │   data['data_used'] = pd.read_excel(excel_path, sheet_name='data_used  
+    17 │   data['bridge_project_software'] = pd.read_excel(excel_path, sheet_n  
+                                                                                
+  /home/adminuser/venv/lib/python3.14/site-packages/pandas/io/excel/_base.py:4  
+  94 in read_excel                                                              
+                                                                                
+     491 │   │   )                                                              
+     492 │                                                                      
+     493 │   try:                                                               
+  ❱  494 │   │   data = io.parse(                                               
+     495 │   │   │   sheet_name=sheet_name,                                     
+     496 │   │   │   header=header,                                             
+     497 │   │   │   names=names,                                               
+                                                                                
+  /home/adminuser/venv/lib/python3.14/site-packages/pandas/io/excel/_base.py:1  
+  780 in parse                                                                  
+                                                                                
+    1777 │   │   >>> file = pd.ExcelFile("myfile.xlsx")  # doctest: +SKIP       
+    1778 │   │   >>> file.parse()  # doctest: +SKIP                             
+    1779 │   │   """                                                            
+  ❱ 1780 │   │   return self._reader.parse(                                     
+    1781 │   │   │   sheet_name=sheet_name,                                     
+    1782 │   │   │   header=header,                                             
+    1783 │   │   │   names=names,                                               
+                                                                                
+  /home/adminuser/venv/lib/python3.14/site-packages/pandas/io/excel/_base.py:7  
+  53 in parse                                                                   
+                                                                                
+     750 │   │   │   │   print(f"Reading sheet {asheetname}")                   
+     751 │   │   │                                                              
+     752 │   │   │   if isinstance(asheetname, str):                            
+  ❱  753 │   │   │   │   sheet = self.get_sheet_by_name(asheetname)             
+     754 │   │   │   else:  # assume an integer if not a string                 
+     755 │   │   │   │   sheet = self.get_sheet_by_index(asheetname)            
+     756                                                                        
+                                                                                
+  /home/adminuser/venv/lib/python3.14/site-packages/pandas/io/excel/_openpyxl.  
+  py:589 in get_sheet_by_name                                                   
+                                                                                
+    586 │   │   return [sheet.title for sheet in self.book.worksheets]          
+    587 │                                                                       
+    588 │   def get_sheet_by_name(self, name: str):                             
+  ❱ 589 │   │   self.raise_if_bad_sheet_by_name(name)                           
+    590 │   │   return self.book[name]                                          
+    591 │                                                                       
+    592 │   def get_sheet_by_index(self, index: int):                           
+                                                                                
+  /home/adminuser/venv/lib/python3.14/site-packages/pandas/io/excel/_base.py:6  
+  05 in raise_if_bad_sheet_by_name                                              
+                                                                                
+     602 │                                                                      
+     603 │   def raise_if_bad_sheet_by_name(self, name: str) -> None:           
+     604 │   │   if name not in self.sheet_names:                               
+  ❱  605 │   │   │   raise ValueError(f"Worksheet named '{name}' not found")    
+     606 │                                                                      
+     607 │   def _check_skiprows_func(                                          
+     608 │   │   self,                                                          
+────────────────────────────────────────────────────────────────────────────────
+ValueError: Worksheet named 'positions_of_trust' not found
+────────────────────── Traceback (most recent call last) ───────────────────────
+  /home/adminuser/venv/lib/python3.14/site-packages/streamlit/runtime/scriptru  
+  nner/exec_code.py:129 in exec_func_with_error_handling                        
+                                                                                
+  /home/adminuser/venv/lib/python3.14/site-packages/streamlit/runtime/scriptru  
+  nner/script_runner.py:793 in code_to_exec                                     
+                                                                                
+  /home/adminuser/venv/lib/python3.14/site-packages/streamlit/runtime/scriptru  
+  nner/script_runner.py:170 in _mpa_v1                                          
+                                                                                
+  /home/adminuser/venv/lib/python3.14/site-packages/streamlit/navigation/page.  
+  py:490 in run                                                                 
+                                                                                
+  /mount/src/dashboard_yde/app.py:19 in <module>                                
+                                                                                
+    16 def get_data():                                                          
+    17 │   return load_all_data("CV_data.xlsx")                                 
+    18                                                                          
+  ❱ 19 data = get_data()                                                        
+    20                                                                          
+    21 st.sidebar.title("Navigation")                                           
+    22 st.sidebar.markdown("---")                                               
+                                                                                
+  /home/adminuser/venv/lib/python3.14/site-packages/streamlit/runtime/caching/  
+  cache_utils.py:281 in __call__                                                
+                                                                                
+  /home/adminuser/venv/lib/python3.14/site-packages/streamlit/runtime/caching/  
+  cache_utils.py:326 in _get_or_create_cached_value                             
+                                                                                
+  /home/adminuser/venv/lib/python3.14/site-packages/streamlit/runtime/caching/  
+  cache_utils.py:385 in _handle_cache_miss                                      
+                                                                                
+  /mount/src/dashboard_yde/app.py:17 in get_data                                
+                                                                                
+    14                                                                          
+    15 @st.cache_data                                                           
+    16 def get_data():                                                          
+  ❱ 17 │   return load_all_data("CV_data.xlsx")                                 
+    18                                                                          
+    19 data = get_data()                                                        
+    20                                                                          
+                                                                                
+  /mount/src/dashboard_yde/utils/data_loader.py:14 in load_all_data             
+                                                                                
+    11 │   data['core_skills'] = pd.read_excel(excel_path, sheet_name='core_sk  
+    12 │   data['software'] = pd.read_excel(excel_path, sheet_name='software')  
+    13 │   data['languages'] = pd.read_excel(excel_path, sheet_name='language'  
+  ❱ 14 │   data['positions_of_trust'] = pd.read_excel(excel_path, sheet_name='  
+    15 │   data['required_expertise'] = pd.read_excel(excel_path, sheet_name='  
+    16 │   data['data_used'] = pd.read_excel(excel_path, sheet_name='data_used  
+    17 │   data['bridge_project_software'] = pd.read_excel(excel_path, sheet_n  
+                                                                                
+  /home/adminuser/venv/lib/python3.14/site-packages/pandas/io/excel/_base.py:4  
+  94 in read_excel                                                              
+                                                                                
+     491 │   │   )                                                              
+     492 │                                                                      
+     493 │   try:                                                               
+  ❱  494 │   │   data = io.parse(                                               
+     495 │   │   │   sheet_name=sheet_name,                                     
+     496 │   │   │   header=header,                                             
+     497 │   │   │   names=names,                                               
+                                                                                
+  /home/adminuser/venv/lib/python3.14/site-packages/pandas/io/excel/_base.py:1  
+  780 in parse                                                                  
+                                                                                
+    1777 │   │   >>> file = pd.ExcelFile("myfile.xlsx")  # doctest: +SKIP       
+    1778 │   │   >>> file.parse()  # doctest: +SKIP                             
+    1779 │   │   """                                                            
+  ❱ 1780 │   │   return self._reader.parse(                                     
+    1781 │   │   │   sheet_name=sheet_name,                                     
+    1782 │   │   │   header=header,                                             
+    1783 │   │   │   names=names,                                               
+                                                                                
+  /home/adminuser/venv/lib/python3.14/site-packages/pandas/io/excel/_base.py:7  
+  53 in parse                                                                   
+                                                                                
+     750 │   │   │   │   print(f"Reading sheet {asheetname}")                   
+     751 │   │   │                                                              
+     752 │   │   │   if isinstance(asheetname, str):                            
+  ❱  753 │   │   │   │   sheet = self.get_sheet_by_name(asheetname)             
+     754 │   │   │   else:  # assume an integer if not a string                 
+     755 │   │   │   │   sheet = self.get_sheet_by_index(asheetname)            
+     756                                                                        
+                                                                                
+  /home/adminuser/venv/lib/python3.14/site-packages/pandas/io/excel/_openpyxl.  
+  py:589 in get_sheet_by_name                                                   
+                                                                                
+    586 │   │   return [sheet.title for sheet in self.book.worksheets]          
+    587 │                                                                       
+    588 │   def get_sheet_by_name(self, name: str):                             
+  ❱ 589 │   │   self.raise_if_bad_sheet_by_name(name)                           
+    590 │   │   return self.book[name]                                          
+    591 │                                                                       
+    592 │   def get_sheet_by_index(self, index: int):                           
+                                                                                
+  /home/adminuser/venv/lib/python3.14/site-packages/pandas/io/excel/_base.py:6  
+  05 in raise_if_bad_sheet_by_name                                              
+                                                                                
+     602 │                                                                      
+     603 │   def raise_if_bad_sheet_by_name(self, name: str) -> None:           
+     604 │   │   if name not in self.sheet_names:                               
+  ❱  605 │   │   │   raise ValueError(f"Worksheet named '{name}' not found")    
+     606 │                                                                      
+     607 │   def _check_skiprows_func(                                          
+     608 │   │   self,                                                          
+────────────────────────────────────────────────────────────────────────────────
+ValueError: Worksheet named 'positions_of_trust' not found
+────────────────────── Traceback (most recent call last) ───────────────────────
+  /home/adminuser/venv/lib/python3.14/site-packages/streamlit/runtime/scriptru  
+  nner/exec_code.py:129 in exec_func_with_error_handling                        
+                                                                                
+  /home/adminuser/venv/lib/python3.14/site-packages/streamlit/runtime/scriptru  
+  nner/script_runner.py:793 in code_to_exec                                     
+                                                                                
+  /home/adminuser/venv/lib/python3.14/site-packages/streamlit/runtime/scriptru  
+  nner/script_runner.py:170 in _mpa_v1                                          
+                                                                                
+  /home/adminuser/venv/lib/python3.14/site-packages/streamlit/navigation/page.  
+  py:490 in run                                                                 
+                                                                                
+  /mount/src/dashboard_yde/pages/5_Skills_Matrix.py:3 in <module>               
+                                                                                
+     1 import streamlit as st                                                   
+     2 import pandas as pd                                                      
+  ❱  3 from utils.data_loader import get_data, get_project_skills, get_project  
+     4                                                                          
+     5 data = get_data()                                                        
+     6 projects = get_project_skills(data)                                      
+────────────────────────────────────────────────────────────────────────────────
+ImportError: cannot import name 'get_data' from 'utils.data_loader' 
+(/mount/src/dashboard_yde/utils/data_loader.py)
+────────────────────── Traceback (most recent call last) ───────────────────────
+  /home/adminuser/venv/lib/python3.14/site-packages/streamlit/runtime/scriptru  
+  nner/exec_code.py:129 in exec_func_with_error_handling                        
+                                                                                
+  /home/adminuser/venv/lib/python3.14/site-packages/streamlit/runtime/scriptru  
+  nner/script_runner.py:793 in code_to_exec                                     
+                                                                                
+  /home/adminuser/venv/lib/python3.14/site-packages/streamlit/runtime/scriptru  
+  nner/script_runner.py:170 in _mpa_v1                                          
+                                                                                
+  /home/adminuser/venv/lib/python3.14/site-packages/streamlit/navigation/page.  
+  py:490 in run                                                                 
+                                                                                
+  /mount/src/dashboard_yde/pages/4_Impact.py:3 in <module>                      
+                                                                                
+     1 import streamlit as st                                                   
+     2 import pandas as pd                                                      
+  ❱  3 from utils.data_loader import get_data                                   
+     4                                                                          
+     5 data = get_data()                                                        
+     6                                                                          
+────────────────────────────────────────────────────────────────────────────────
+ImportError: cannot import name 'get_data' from 'utils.data_loader' 
+(/mount/src/dashboard_yde/utils/data_loader.py)
+────────────────────── Traceback (most recent call last) ───────────────────────
+  /home/adminuser/venv/lib/python3.14/site-packages/streamlit/runtime/scriptru  
+  nner/exec_code.py:129 in exec_func_with_error_handling                        
+                                                                                
+  /home/adminuser/venv/lib/python3.14/site-packages/streamlit/runtime/scriptru  
+  nner/script_runner.py:793 in code_to_exec                                     
+                                                                                
+  /home/adminuser/venv/lib/python3.14/site-packages/streamlit/runtime/scriptru  
+  nner/script_runner.py:170 in _mpa_v1                                          
+                                                                                
+  /home/adminuser/venv/lib/python3.14/site-packages/streamlit/navigation/page.  
+  py:490 in run                                                                 
+                                                                                
+  /mount/src/dashboard_yde/pages/5_Skills_Matrix.py:3 in <module>               
+                                                                                
+     1 import streamlit as st                                                   
+     2 import pandas as pd                                                      
+  ❱  3 from utils.data_loader import get_data, get_project_skills, get_project  
+     4                                                                          
+     5 data = get_data()                                                        
+     6 projects = get_project_skills(data)                                      
+────────────────────────────────────────────────────────────────────────────────
+ImportError: cannot import name 'get_data' from 'utils.data_loader' 
+(/mount/src/dashboard_yde/utils/data_loader.py)
+────────────────────── Traceback (most recent call last) ───────────────────────
+  /home/adminuser/venv/lib/python3.14/site-packages/streamlit/runtime/scriptru  
+  nner/exec_code.py:129 in exec_func_with_error_handling                        
+                                                                                
+  /home/adminuser/venv/lib/python3.14/site-packages/streamlit/runtime/scriptru  
+  nner/script_runner.py:793 in code_to_exec                                     
+                                                                                
+  /home/adminuser/venv/lib/python3.14/site-packages/streamlit/runtime/scriptru  
+  nner/script_runner.py:170 in _mpa_v1                                          
+                                                                                
+  /home/adminuser/venv/lib/python3.14/site-packages/streamlit/navigation/page.  
+  py:490 in run                                                                 
+                                                                                
+  /mount/src/dashboard_yde/pages/4_Impact.py:3 in <module>                      
+                                                                                
+     1 import streamlit as st                                                   
+     2 import pandas as pd                                                      
+  ❱  3 from utils.data_loader import get_data                                   
+     4                                                                          
+     5 data = get_data()                                                        
+     6                                                                          
+────────────────────────────────────────────────────────────────────────────────
+ImportError: cannot import name 'get_data' from 'utils.data_loader' 
+(/mount/src/dashboard_yde/utils/data_loader.py)
+────────────────────── Traceback (most recent call last) ───────────────────────
+  /home/adminuser/venv/lib/python3.14/site-packages/streamlit/runtime/scriptru  
+  nner/exec_code.py:129 in exec_func_with_error_handling                        
+                                                                                
+  /home/adminuser/venv/lib/python3.14/site-packages/streamlit/runtime/scriptru  
+  nner/script_runner.py:793 in code_to_exec                                     
+                                                                                
+  /home/adminuser/venv/lib/python3.14/site-packages/streamlit/runtime/scriptru  
+  nner/script_runner.py:170 in _mpa_v1                                          
+                                                                                
+  /home/adminuser/venv/lib/python3.14/site-packages/streamlit/navigation/page.  
+  py:490 in run                                                                 
+                                                                                
+  /mount/src/dashboard_yde/pages/3_Career.py:3 in <module>                      
+                                                                                
+     1 import streamlit as st                                                   
+     2 import pandas as pd                                                      
+  ❱  3 from utils.data_loader import get_data                                   
+     4                                                                          
+     5 data = get_data()                                                        
+     6                                                                          
+────────────────────────────────────────────────────────────────────────────────
+ImportError: cannot import name 'get_data' from 'utils.data_loader' 
+(/mount/src/dashboard_yde/utils/data_loader.py)
+────────────────────── Traceback (most recent call last) ───────────────────────
+  /home/adminuser/venv/lib/python3.14/site-packages/streamlit/runtime/scriptru  
+  nner/exec_code.py:129 in exec_func_with_error_handling                        
+                                                                                
+  /home/adminuser/venv/lib/python3.14/site-packages/streamlit/runtime/scriptru  
+  nner/script_runner.py:793 in code_to_exec                                     
+                                                                                
+  /home/adminuser/venv/lib/python3.14/site-packages/streamlit/runtime/scriptru  
+  nner/script_runner.py:170 in _mpa_v1                                          
+                                                                                
+  /home/adminuser/venv/lib/python3.14/site-packages/streamlit/navigation/page.  
+  py:490 in run                                                                 
+                                                                                
+  /mount/src/dashboard_yde/pages/3_Career.py:3 in <module>                      
+                                                                                
+     1 import streamlit as st                                                   
+     2 import pandas as pd                                                      
+  ❱  3 from utils.data_loader import get_data                                   
+     4                                                                          
+     5 data = get_data()                                                        
+     6                                                                          
+────────────────────────────────────────────────────────────────────────────────
+ImportError: cannot import name 'get_data' from 'utils.data_loader' 
+(/mount/src/dashboard_yde/utils/data_loader.py)
+────────────────────── Traceback (most recent call last) ───────────────────────
+  /home/adminuser/venv/lib/python3.14/site-packages/streamlit/runtime/scriptru  
+  nner/exec_code.py:129 in exec_func_with_error_handling                        
+                                                                                
+  /home/adminuser/venv/lib/python3.14/site-packages/streamlit/runtime/scriptru  
+  nner/script_runner.py:793 in code_to_exec                                     
+                                                                                
+  /home/adminuser/venv/lib/python3.14/site-packages/streamlit/runtime/scriptru  
+  nner/script_runner.py:170 in _mpa_v1                                          
+                                                                                
+  /home/adminuser/venv/lib/python3.14/site-packages/streamlit/navigation/page.  
+  py:490 in run                                                                 
+                                                                                
+  /mount/src/dashboard_yde/pages/3_Career.py:3 in <module>                      
+                                                                                
+     1 import streamlit as st                                                   
+     2 import pandas as pd                                                      
+  ❱  3 from utils.data_loader import get_data                                   
+     4                                                                          
+     5 data = get_data()                                                        
+     6                                                                          
+────────────────────────────────────────────────────────────────────────────────
+ImportError: cannot import name 'get_data' from 'utils.data_loader' 
+(/mount/src/dashboard_yde/utils/data_loader.py)
+────────────────────── Traceback (most recent call last) ───────────────────────
+  /home/adminuser/venv/lib/python3.14/site-packages/streamlit/runtime/scriptru  
+  nner/exec_code.py:129 in exec_func_with_error_handling                        
+                                                                                
+  /home/adminuser/venv/lib/python3.14/site-packages/streamlit/runtime/scriptru  
+  nner/script_runner.py:793 in code_to_exec                                     
+                                                                                
+  /home/adminuser/venv/lib/python3.14/site-packages/streamlit/runtime/scriptru  
+  nner/script_runner.py:170 in _mpa_v1                                          
+                                                                                
+  /home/adminuser/venv/lib/python3.14/site-packages/streamlit/navigation/page.  
+  py:490 in run                                                                 
+                                                                                
+  /mount/src/dashboard_yde/pages/3_Career.py:3 in <module>                      
+                                                                                
+     1 import streamlit as st                                                   
+     2 import pandas as pd                                                      
+  ❱  3 from utils.data_loader import get_data                                   
+     4                                                                          
+     5 data = get_data()                                                        
+     6                                                                          
+────────────────────────────────────────────────────────────────────────────────
+ImportError: cannot import name 'get_data' from 'utils.data_loader' 
+(/mount/src/dashboard_yde/utils/data_loader.py)
+────────────────────── Traceback (most recent call last) ───────────────────────
+  /home/adminuser/venv/lib/python3.14/site-packages/streamlit/runtime/scriptru  
+  nner/exec_code.py:129 in exec_func_with_error_handling                        
+                                                                                
+  /home/adminuser/venv/lib/python3.14/site-packages/streamlit/runtime/scriptru  
+  nner/script_runner.py:793 in code_to_exec                                     
+                                                                                
+  /home/adminuser/venv/lib/python3.14/site-packages/streamlit/runtime/scriptru  
+  nner/script_runner.py:170 in _mpa_v1                                          
+                                                                                
+  /home/adminuser/venv/lib/python3.14/site-packages/streamlit/navigation/page.  
+  py:490 in run                                                                 
+                                                                                
+  /mount/src/dashboard_yde/app.py:19 in <module>                                
+                                                                                
+    16 def get_data():                                                          
+    17 │   return load_all_data("CV_data.xlsx")                                 
+    18                                                                          
+  ❱ 19 data = get_data()                                                        
+    20                                                                          
+    21 st.sidebar.title("Navigation")                                           
+    22 st.sidebar.markdown("---")                                               
+                                                                                
+  /home/adminuser/venv/lib/python3.14/site-packages/streamlit/runtime/caching/  
+  cache_utils.py:281 in __call__                                                
+                                                                                
+  /home/adminuser/venv/lib/python3.14/site-packages/streamlit/runtime/caching/  
+  cache_utils.py:326 in _get_or_create_cached_value                             
+                                                                                
+  /home/adminuser/venv/lib/python3.14/site-packages/streamlit/runtime/caching/  
+  cache_utils.py:385 in _handle_cache_miss                                      
+                                                                                
+  /mount/src/dashboard_yde/app.py:17 in get_data                                
+                                                                                
+    14                                                                          
+    15 @st.cache_data                                                           
+    16 def get_data():                                                          
+  ❱ 17 │   return load_all_data("CV_data.xlsx")                                 
+    18                                                                          
+    19 data = get_data()                                                        
+    20                                                                          
+                                                                                
+  /mount/src/dashboard_yde/utils/data_loader.py:14 in load_all_data             
+                                                                                
+    11 │   data['core_skills'] = pd.read_excel(excel_path, sheet_name='core_sk  
+    12 │   data['software'] = pd.read_excel(excel_path, sheet_name='software')  
+    13 │   data['languages'] = pd.read_excel(excel_path, sheet_name='language'  
+  ❱ 14 │   data['positions_of_trust'] = pd.read_excel(excel_path, sheet_name='  
+    15 │   data['required_expertise'] = pd.read_excel(excel_path, sheet_name='  
+    16 │   data['data_used'] = pd.read_excel(excel_path, sheet_name='data_used  
+    17 │   data['bridge_project_software'] = pd.read_excel(excel_path, sheet_n  
+                                                                                
+  /home/adminuser/venv/lib/python3.14/site-packages/pandas/io/excel/_base.py:4  
+  94 in read_excel                                                              
+                                                                                
+     491 │   │   )                                                              
+     492 │                                                                      
+     493 │   try:                                                               
+  ❱  494 │   │   data = io.parse(                                               
+     495 │   │   │   sheet_name=sheet_name,                                     
+     496 │   │   │   header=header,                                             
+     497 │   │   │   names=names,                                               
+                                                                                
+  /home/adminuser/venv/lib/python3.14/site-packages/pandas/io/excel/_base.py:1  
+  780 in parse                                                                  
+                                                                                
+    1777 │   │   >>> file = pd.ExcelFile("myfile.xlsx")  # doctest: +SKIP       
+    1778 │   │   >>> file.parse()  # doctest: +SKIP                             
+    1779 │   │   """                                                            
+  ❱ 1780 │   │   return self._reader.parse(                                     
+    1781 │   │   │   sheet_name=sheet_name,                                     
+    1782 │   │   │   header=header,                                             
+    1783 │   │   │   names=names,                                               
+                                                                                
+  /home/adminuser/venv/lib/python3.14/site-packages/pandas/io/excel/_base.py:7  
+  53 in parse                                                                   
+                                                                                
+     750 │   │   │   │   print(f"Reading sheet {asheetname}")                   
+     751 │   │   │                                                              
+     752 │   │   │   if isinstance(asheetname, str):                            
+  ❱  753 │   │   │   │   sheet = self.get_sheet_by_name(asheetname)             
+     754 │   │   │   else:  # assume an integer if not a string                 
+     755 │   │   │   │   sheet = self.get_sheet_by_index(asheetname)            
+     756                                                                        
+                                                                                
+  /home/adminuser/venv/lib/python3.14/site-packages/pandas/io/excel/_openpyxl.  
+  py:589 in get_sheet_by_name                                                   
+                                                                                
+    586 │   │   return [sheet.title for sheet in self.book.worksheets]          
+    587 │                                                                       
+    588 │   def get_sheet_by_name(self, name: str):                             
+  ❱ 589 │   │   self.raise_if_bad_sheet_by_name(name)                           
+    590 │   │   return self.book[name]                                          
+    591 │                                                                       
+    592 │   def get_sheet_by_index(self, index: int):                           
+                                                                                
+  /home/adminuser/venv/lib/python3.14/site-packages/pandas/io/excel/_base.py:6  
+  05 in raise_if_bad_sheet_by_name                                              
+                                                                                
+     602 │                                                                      
+     603 │   def raise_if_bad_sheet_by_name(self, name: str) -> None:           
+     604 │   │   if name not in self.sheet_names:                               
+  ❱  605 │   │   │   raise ValueError(f"Worksheet named '{name}' not found")    
+     606 │                                                                      
+     607 │   def _check_skiprows_func(                                          
+     608 │   │   self,                                                          
+────────────────────────────────────────────────────────────────────────────────
+ValueError: Worksheet named 'positions_of_trust' not found

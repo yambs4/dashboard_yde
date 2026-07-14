@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Yonatan Desalegn - CV Dashboard</title>
+  <script>
+    var targetUrl = "https://REPLACE_WITH_YOUR_STREAMLIT_APP_URL";
+    var countdown = 3;
+    function redirect() {
+      if (countdown > 0) {
+        document.getElementById("countdown").textContent = countdown;
+        countdown--;
+        setTimeout(redirect, 1000);
+      } else {
+        window.location.replace(targetUrl);
+      }
+    }
+    window.onload = redirect;
+  </script>
+  <style>
+    body {
+      font-family: system-ui, -apple-system, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      margin: 0;
+      background: #f3f4f6;
+      color: #374151;
+    }
+    .card {
+      background: #ffffff;
+      border: 1px solid #e5e7eb;
+      border-radius: 0.75rem;
+      padding: 2rem;
+      text-align: center;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+      max-width: 420px;
+    }
+    h1 {
+      font-size: 1.5rem;
+      margin-bottom: 0.5rem;
+      color: #111827;
+    }
+    p {
+      color: #6b7280;
+      margin: 0.5rem 0;
+    }
+    a {
+      color: #2563eb;
+      text-decoration: none;
+      font-weight: 600;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <h1>Yonatan Desalegn</h1>
+    <p>Redirecting to CV Dashboard in <span id="countdown">3</span>s...</p>
+    <p>If not redirected, <a id="link" href="#">click here</a>.</p>
+  </div>
+  <script>
+    document.getElementById("link").href = targetUrl;
+  </script>
+</body>
+</html>
