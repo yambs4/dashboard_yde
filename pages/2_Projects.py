@@ -4,8 +4,8 @@ from utils.data_loader import get_data, get_project_skills, get_project_software
 
 data = get_data()
 projects = get_project_skills(data)
-projects = get_project_software(projects)
-projects = get_project_data(projects)
+projects = get_project_software(projects, data)
+projects = get_project_data(projects, data)
 
 st.title("Project Portfolio")
 

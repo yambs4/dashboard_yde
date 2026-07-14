@@ -41,8 +41,7 @@ def get_project_skills(data: Dict[str, Any]) -> pd.DataFrame:
     result = result.merge(exp_list, on='id_prj', how='left')
     return result
 
-def get_project_software(data: Dict[str, Any]) -> pd.DataFrame:
-    projects = data['projects'].copy()
+def get_project_software(projects: pd.DataFrame, data: Dict[str, Any]) -> pd.DataFrame:
     software = data['software'].copy()
     bridge = data['bridge_project_software'].copy()
     
@@ -52,8 +51,7 @@ def get_project_software(data: Dict[str, Any]) -> pd.DataFrame:
     
     return projects.merge(sw_list, on='id_prj', how='left')
 
-def get_project_data(data: Dict[str, Any]) -> pd.DataFrame:
-    projects = data['projects'].copy()
+def get_project_data(projects: pd.DataFrame, data: Dict[str, Any]) -> pd.DataFrame:
     data_used = data['data_used'].copy()
     bridge = data['bridge_project_data'].copy()
     
