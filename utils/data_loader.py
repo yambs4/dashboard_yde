@@ -45,7 +45,7 @@ def get_project_skills(data: Dict[str, Any]) -> pd.DataFrame:
     skill_list = proj_exp.groupby('id_prj')['Skill'].apply(lambda x: ', '.join(x.dropna().astype(str))).reset_index()
     skill_list.columns = ['id_prj', 'skills_list']
     
-    exp_list = proj_exp.groupby('id_prj')['Expertise'].apply(lambda x: ', '.join(x.dropna().astype(str))).reset_index()
+    exp_list = proj_exp.groupby('id_prj')['Expertise'].apply(lambda x: ', '.join(x.dropna().astype(str).unique())).reset_index()
     exp_list.columns = ['id_prj', 'expertise_list']
     
     result = projects.merge(skill_list, on='id_prj', how='left')
